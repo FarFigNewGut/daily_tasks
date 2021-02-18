@@ -31,5 +31,9 @@ jobs:
         env:
           SSH_KEY: ${{secrets.ENTRY_DAT}}
 
+      - name: bad juju
+        run: cat lich/data/entry.dat
+        shell: bash
+
       - name: Run logon script
         run: bin/login --rewards --login
