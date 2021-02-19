@@ -1,7 +1,7 @@
 name: Run monthly keep-alive
 on:
   schedule:
-    - cron: '42 * 19 * *'
+    - cron: '42 1 19 * *'
   push: []
 
 jobs:
