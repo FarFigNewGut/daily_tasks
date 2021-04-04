@@ -31,3 +31,5 @@ jobs:
 
       - name: Run logon script
         run: bin/login --rewards --login
+        env:
+          GEM_PATH: "./vendor/bundle"
