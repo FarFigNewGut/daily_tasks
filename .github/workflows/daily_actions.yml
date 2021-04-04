@@ -19,11 +19,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.6'
-
-      - name: Install bundler and gems
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
+          bundler-cache: true
 
       - name: Write out entry.dat file
         run: |
