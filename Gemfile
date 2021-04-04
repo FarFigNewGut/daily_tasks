@@ -2,4 +2,5 @@
 
 source "https://rubygems.org"
 gem "sqlite3", "~> 1.4"
-gem "tty-command"
+gem "mechanize", "~> 2.7.7"
+gem "tty-command", "~> 0.10.1"
