@@ -28,7 +28,7 @@ jobs:
       - name: Write out entry.dat file
         run: |
           mkdir lich/data
-          'echo "$ENTRY_DAT" > lich/data/entry.dat'
+          echo "$ENTRY_DAT" > lich/data/entry.dat
         shell: bash
         env:
           ENTRY_DAT: ${{secrets.ENTRY_DAT}}
