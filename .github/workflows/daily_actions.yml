@@ -30,6 +30,4 @@ jobs:
           ENTRY_DAT: ${{secrets.ENTRY_DAT}}
 
       - name: Run logon script
-        run: bin/login --rewards --login
-        env:
-          GEM_PATH: "./vendor/bundle"
+        run: bundle exec bin/login --rewards --login
