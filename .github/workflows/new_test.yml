@@ -21,7 +21,9 @@ jobs:
           ACCOUNTSTEST : ${{secrets.ACCOUNTSTEST}}
 
       - name: Download latest rewards release
-        run: wget https://github.com/ondreian/rewards.cr/releases/download/v0.3.2/rewards
+        run: |
+          wget https://github.com/ondreian/rewards.cr/releases/download/v0.3.2/rewards
+          chmod +x rewards
         
       - name: Run rewards
         run: ./rewards accounts.csv
