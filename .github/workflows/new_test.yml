@@ -2,7 +2,6 @@ name: Run daily logons
 on:
   schedule:
     workflow_dispatch:
-  push: []
 
 jobs:
   logons:
