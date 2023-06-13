@@ -1,4 +1,4 @@
-name: Run daily logons
+name: New accounts test
 on:
   workflow_dispatch:
 
@@ -18,7 +18,7 @@ jobs:
           echo $ACCOUNTSTEST >> accounts.csv
         shell: bash
         env:
-          ACCOUNTSTEST : ${{secrets.ACCOUNTSTEST}
+          ACCOUNTSTEST : ${{secrets.ACCOUNTSTEST}}
 
       - name: Download latest rewards release
         run: wget https://github.com/ondreian/rewards.cr/releases/download/v0.3.2/rewards
