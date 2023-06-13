@@ -13,8 +13,15 @@ jobs:
         with:
           submodules: true
 
+      - name: Write out accounts file
+        run: |
+          echo $ACCOUNTSTEST >> accounts.csv
+        shell: bash
+        env:
+          ACCOUNTSTEST : ${{secrets.ACCOUNTSTEST}
+
       - name: Download latest rewards release
         run: wget https://github.com/ondreian/rewards.cr/releases/download/v0.3.2/rewards
         
-      - name: run rewards
+      - name: Run rewards
         run: ./rewards accounts.csv
